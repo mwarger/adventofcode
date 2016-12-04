@@ -3,7 +3,7 @@
 using namespace std;
 
 int main() {
-	// create vars: string sectorID, int result
+	// create vars: result (global), name, sectorID, actualChecksum, maxIndex, expectedChecksum (instance)
 	// create int array[255] to store mode of each char (letters only)
 	// traverse input line
 	// -- if char is letter, increment array index corresponding to each letter
@@ -22,7 +22,7 @@ int main() {
 	while (name[0] != '0')
 	{
 		string sectorID, checksum, expected;
-		int max, maxIndex;
+		int maxIndex;
 		int alphaMode[255] = {0};
 		for (int i = 0; i < name.size(); i++)
 		{
@@ -45,7 +45,6 @@ int main() {
 		
 		for(int i = 0; i < 5; i++)
 		{
-			max = alphaMode[0];
 			maxIndex = 0;
 			for(int j = 0; j < name.size() - 7; j++)
 			{
